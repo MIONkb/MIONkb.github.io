@@ -26,6 +26,14 @@ A unified framework bridging user-friendly programming and high-performance acce
 - **An Agile Deploying Approach for Large-Scale Workloads on CGRA-CPU Architecture** (DATE 2024) — Jiahang Lou, et al.; Design, Automation & Test in Europe Conference & Exhibition (DATE), Valencia, Spain, March 22–25, 2024. 
 A user-friendly MLIR-based multi-level compiler framework that bridges CGRA and RISC-V CPU architectures by automating optimizations and hardware–software partitioning for large-scale workloads.
 
+- [View all publications](https://mionkb.github.io/publications/)
+
+## Competition Experiences
+[View competition experiences](https://mionkb.github.io/awards/awards/)
+
+## Internship
+[View internship details](https://mionkb.github.io/experience/internship/)
+
 ## Contact
 - **Email:** [jhlou22@m.fudan.edu.com](mailto:jhlou22@m.fudan.edu.com)
 - **Location:** Zhangheng Road 825, Shanghai, China  张衡路825号,浦东新区
