@@ -6,11 +6,8 @@ author_profile: true
 ---
 
 {% include base_path %}
-{% assign experience_entries = site.experience%}
+{% assign experience_entries = site.experience | sort: 'title' %}
 
 {% for post in experience_entries %}
   {% include archive-single.html %}
 {% endfor %}
-
-<!-- {% include_relative _experience/education.md %}
-{% include_relative _experience/internship.md %} -->

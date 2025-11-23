@@ -5,7 +5,7 @@ permalink: /awards/
 author_profile: true
 ---
 {% include base_path %}
-{% assign awards_entries = site.awards%}
+{% assign awards_entries = site.awards | sort: 'title'%}
 
 {% for post in awards_entries %}
   {% include archive-single.html %}
