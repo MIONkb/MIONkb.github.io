@@ -1,3 +1,7 @@
+---
+title: "Awards & Competition Experience"
+---
+
 ## Awards & Competition Experience
 - **2024 Biren Technology “Flying Cup” GPU Programming Challenge** 
 — National First Place · 40,000 RMB · Jul. 2024 – Aug. 2024. 

@@ -1,5 +1,5 @@
-<!-- ---
+---
 title: "Experience"
---- -->
-## Education
+---
+<!-- ## Education -->
 {% include education.md %}
