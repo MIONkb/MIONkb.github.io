@@ -1,0 +1,13 @@
+---
+title: "MDCRA: A Reconfigurable Accelerator Framework for Multiple Dataflow Lanes"
+collection: publications
+category: conferences
+permalink: /publication/2024-mdcra-reconfigurable-accelerator
+excerpt: "Reconfigurable accelerator framework enabling multiple dataflow lanes on CGRAs."
+date: 2024-07-15
+venue: "35th IEEE International Conference on Application-specific Systems, Architectures and Processors (ASAP 2024)"
+paperurl: ""
+citation: "Shaoyang Sun, Boyin Jin, Jiahang Lou, Jiangnan Li, Yuhang Cao, Jingyuan Li, Chen Shen, Yuan Dai, Wenbo Yin, Wai-Shing Luk, Lingli Wang. (2024). &quot;MDCRA: A Reconfigurable Accelerator Framework for Multiple Dataflow Lanes.&quot; <i>ASAP 2024</i>."
+---
+
+A reconfigurable accelerator framework that scales multiple dataflow lanes to improve performance and flexibility on CGRA platforms.
