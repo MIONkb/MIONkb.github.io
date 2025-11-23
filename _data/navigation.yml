@@ -15,7 +15,7 @@ main:
     url: /#education
 
   - title: "News"
-    url: /#News
+    url: /news
 
   # - title: "Research"
   #   url: /#research

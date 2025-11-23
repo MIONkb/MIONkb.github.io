@@ -20,6 +20,9 @@ I have published as the first author at **DATE 2024** and **DAC 2025**, and have
 - Heterogeneous CGRA–CPU and CGRA–GPU systems
 - AI compilers and dataflow optimization for DNNs
 
+## Recent News
+{% include recent_news.md %}
+
 ## Selected Publications
 - **Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs** (DAC 2025) — Jiahang Lou, et al.; Design Automation Conference (DAC), San Francisco, USA, June 21–25, 2025. Github: [adora-compiler](https://github.com/FDU-ME-ARC/adora-compiler)**
 A unified framework bridging user-friendly programming and high-performance acceleration for CGRAs through automated loop transformations, task/data-flow optimization, and systematic algorithms.

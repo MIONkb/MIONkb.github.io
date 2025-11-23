@@ -1,0 +1,3 @@
+- **2024 Biren Technology “Flying Cup” GPU Programming Challenge** — National First Place · 40,000 RMB · Jul. 2024 – Aug. 2024.
+  - GPU-based development of AI operators with performance-optimized CUDA kernels and system-level integration.
+  - 2024年壁仞科技“飞翔杯”GPU编程大赛 全国第一名 · 40000元。
