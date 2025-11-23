@@ -1,2 +1,5 @@
-## Education
+---
+title: "Education"
+---
+
 {% include education.md %}
