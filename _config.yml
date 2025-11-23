@@ -294,6 +294,15 @@ defaults:
       author_profile: true
       share: true
       comments: true
+  # _awards
+  - scope:
+      path: ""
+      type: awards
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
   # _talks
   - scope:
       path: ""

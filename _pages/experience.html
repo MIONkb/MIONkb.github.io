@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 {% include base_path %}
-{% assign experience_entries = site.experience | sort: 'title' %}
+{% assign experience_entries = site.experience%}
 
 {% for post in experience_entries %}
   {% include archive-single.html %}

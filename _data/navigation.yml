@@ -14,6 +14,9 @@ main:
   - title: "Education"
     url: /#education
 
+  - title: "News"
+    url: /#News
+
   # - title: "Research"
   #   url: /#research
 
@@ -27,8 +30,8 @@ main:
   - title: "Experience"
     url: /experience
 
-  - title: "Conferences"
-    url: /#talks
+  # - title: "Conferences"
+  #   url: /#talks
 
   # - title: "CV"
   #   url: /cv/
