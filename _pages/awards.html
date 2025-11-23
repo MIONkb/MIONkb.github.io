@@ -4,5 +4,10 @@ title: "Awards"
 permalink: /awards/
 author_profile: true
 ---
+{% include base_path %}
+{% assign awards_entries = site.awards%}
 
-{% include_relative _awards/awards.md %}
+{% for post in awards_entries %}
+  {% include archive-single.html %}
+{% endfor %}
+<!-- {% include_relative _awards/awards.md %} -->
