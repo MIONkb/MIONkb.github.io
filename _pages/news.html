@@ -4,4 +4,9 @@ title: "News"
 permalink: /news/
 author_profile: true
 ---
-{{%site.awards.news %}}
+{% include base_path %}
+{% assign news_entries = site.news | sort: 'title'%}
+
+{% for post in news_entries %}
+  {% include archive-single.html %}
+{% endfor %}
