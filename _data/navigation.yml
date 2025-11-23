@@ -14,17 +14,18 @@ main:
   - title: "Education"
     url: /#education
 
-  - title: "Research"
-    url: /#research
+  # - title: "Research"
+  #   url: /#research
 
   - title: "Publications"
     url: /publications
 
+
   - title: "Awards"
-    url: /#awards
+    url: /awards
 
   - title: "Experience"
-    url: /#experience
+    url: /experience
 
   - title: "Conferences"
     url: /#talks
