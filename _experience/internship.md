@@ -1,5 +1,5 @@
 ---
-title: "Intern Experience"
+title: "Internship Experience"
 ---
 
 <!-- ## Intern Experience -->
