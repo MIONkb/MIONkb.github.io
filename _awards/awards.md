@@ -1,5 +1,5 @@
 ---
-title: "Competition Awards"
+title: "Awards"
 ---
 
 ## Awards & Competition Experience
