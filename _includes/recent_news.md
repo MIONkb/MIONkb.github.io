@@ -1,3 +1,3 @@
-- **Feb. 2025** — Achieved **first place nationwide** in the Biren “Feixiang Cup” GPU Programming Competition. 壁仞科技“飞翔杯”GPU编程挑战赛获得全国第一名！ 
-- **Feb. 2025** — Our work of CGRA compiler is accepted by **DAC 2025**.  
-- **June 2025** — Will be giving an oral presentation at DAC 2025 — see you in San Francisco!
+- **June 2025** — Scheduled to deliver an oral presentation at **DAC 2025** in San Francisco.
+- **Feb. 2025** — Our [CGRA compiler work](https://mionkb.github.io/publications/) has been accepted by **DAC 2025**.  
+- **Feb. 2025** — Achieved **first place nationwide** in the Biren “Feixiang Cup” GPU Programming Competition (壁仞科技“飞翔杯”GPU编程挑战赛).  
