@@ -1,0 +1,13 @@
+---
+layout: archive
+title: "Awards"
+permalink: /awards/
+author_profile: true
+---
+
+{% include base_path %}
+{% assign awards = site.awards | sort: 'title' %}
+
+{% for post in awards %}
+  {% include archive-single.html %}
+{% endfor %}
