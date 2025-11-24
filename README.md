@@ -67,6 +67,17 @@ docker compose up
 
 You should now be able to access the website from `localhost:4000`.
 
+## Generate a PDF resume from site content
+
+You can automatically assemble a PDF resume that pulls your About section, research interests, experience, publications, and awards into a single document (with your profile photo) by running:
+
+```bash
+pip install -r scripts/requirements-resume.txt
+python scripts/generate_resume.py --output files/resume.pdf --photo images/bio-photo.jpg
+```
+
+The script reads the existing markdown files in `_pages/about.md`, `_experience/`, `_publications/`, and `_awards/` to build the PDF and writes it to the location specified by `--output`.
+
 ### Using the DevContainer in VS Code
 
 If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
