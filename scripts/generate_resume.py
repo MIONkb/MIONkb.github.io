@@ -20,10 +20,29 @@ from typing import Dict, Iterable, List, Tuple
 
 try:
     from fpdf import FPDF
+    from fpdf.enums import XPos, YPos
 except ImportError as exc:  # pragma: no cover - import guard
     raise SystemExit("Please install dependencies with `pip install -r scripts/requirements-resume.txt`.") from exc
 
 import yaml
+
+# [text](url) -> text
+_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
+# `code` -> code
+_MD_CODE_RE = re.compile(r"`([^`]+)`")
+# **em** / *em* / __em__ / _em_ -> em
+_MD_EMPH_RE = re.compile(r"(\*\*|__|\*|_)(.*?)\1")
+# <tag> -> 空
+_HTML_TAG_RE = re.compile(r"<[^>]+>")
+
+
+def md_inline_to_text(text: str) -> str:
+    """Strip basic inline markdown + HTML to plain text for PDF rendering."""
+    text = _MD_LINK_RE.sub(r"\1", text)
+    text = _MD_CODE_RE.sub(r"\1", text)
+    text = _MD_EMPH_RE.sub(r"\2", text)
+    text = _HTML_TAG_RE.sub("", text)
+    return text.strip()
 
 ROOT = Path(__file__).resolve().parents[1]
 ABOUT_PAGE = ROOT / "_pages" / "about.md"
@@ -33,26 +52,33 @@ PUBLICATIONS_DIR = ROOT / "_publications"
 
 
 class ResumePDF(FPDF):
-    def header(self) -> None:  # pragma: no cover - simple layout code
-        # Override the parent header to remove default page numbering.
-        return
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+        # 默认字体名，可以被外面覆盖（build_resume 里已经设置 pdf.base_font = "CJK"）
+        self.base_font = "Helvetica"
 
     def section_title(self, title: str) -> None:
-        self.set_font("Helvetica", "B", 16)
-        self.cell(0, 10, title, ln=True)
-        self.ln(2)
+        self.set_font(self.base_font, size=15)
+        self.set_x(self.l_margin)
+        self.cell(0, 10, title, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.ln(1)
 
     def paragraph(self, text: str) -> None:
-        self.set_font("Helvetica", size=11)
-        self.multi_cell(0, 7, text)
+        self.set_font(self.base_font, size=11)
+        self.set_x(self.l_margin)
+        effective_w = self.w - self.l_margin - self.r_margin
+        self.multi_cell(effective_w, 6, text)
+        self.ln(0.5)
+
+    def bullet_list(self, items: list[str]) -> None:
+        self.set_font(self.base_font, size=11)
+        effective_w = self.w - self.l_margin - self.r_margin
+        for item in items:
+            self.set_x(self.l_margin)
+            text = f"- {item}"
+            self.multi_cell(effective_w, 6, text)
         self.ln(1)
 
-    def bullet_list(self, items: Iterable[str]) -> None:
-        self.set_font("Helvetica", size=11)
-        for item in items:
-            self.cell(6)
-            self.multi_cell(0, 6, f"• {item}")
-        self.ln(1)
 
 
 def load_markdown_body(path: Path) -> List[str]:
@@ -88,49 +114,105 @@ def parse_about(content: List[str]) -> Tuple[List[str], List[str]]:
     research: List[str] = []
     in_about = False
     in_research = False
+    current_para: List[str] = []
 
     for line in content:
         heading_match = re.match(r"^## +(.+)$", line)
         if heading_match:
+            # 遇到二级标题，看看是不是 About
             heading = heading_match.group(1).strip().lower()
+            # 先把正在累积的段落收尾
+            if current_para:
+                paragraphs.append(md_inline_to_text(" ".join(current_para)))
+                current_para = []
             in_about = heading.startswith("about")
             in_research = False
             continue
 
+        # 特殊标记，开始 Research Interests 区域
         if line.strip().startswith("- Research Interests"):
+            if current_para:
+                paragraphs.append(md_inline_to_text(" ".join(current_para)))
+                current_para = []
             in_research = True
             in_about = False
             continue
 
+        # 遇到新的 section（## 开头）就退出当前区域
         if line.strip().startswith("##"):
+            if current_para:
+                paragraphs.append(md_inline_to_text(" ".join(current_para)))
+                current_para = []
             in_about = False
             in_research = False
+            continue
 
         if in_about:
             clean = line.strip()
             if clean:
-                paragraphs.append(clean)
+                current_para.append(clean)
+            else:
+                # 空行视作段落结束
+                if current_para:
+                    paragraphs.append(md_inline_to_text(" ".join(current_para)))
+                    current_para = []
         elif in_research:
             stripped = line.strip()
-            if stripped.startswith("-"):
-                research.append(stripped.lstrip("-* "))
-            elif stripped.startswith("•"):
-                research.append(stripped.lstrip("• "))
+            if stripped.startswith(("-", "*", "•")):
+                item = stripped.lstrip("-*• ").strip()
+                if item:
+                    research.append(md_inline_to_text(item))
             elif stripped == "":
+                # 空行：继续等待下一条 bullet
                 continue
             else:
-                # Stop if we've left the bullet list
+                # 碰到非 bullet 的内容，说明 research section 结束
                 in_research = False
+
+    # 文件结束时把最后一个段落收掉
+    if current_para:
+        paragraphs.append(md_inline_to_text(" ".join(current_para)))
 
     return paragraphs, research
 
 
 def parse_bullet_section(lines: Iterable[str]) -> List[str]:
+    """Parse a markdown bullet list (allowing multi-line items)."""
     items: List[str] = []
+    current: List[str] = []
+
     for line in lines:
-        stripped = line.strip()
-        if stripped.startswith("-"):
-            items.append(stripped.lstrip("- "))
+        stripped = line.rstrip()
+
+        if not stripped:
+            # 空行结束当前 bullet
+            if current:
+                text = md_inline_to_text(" ".join(current))
+                if text and text.lower() != "link":
+                    items.append(text)
+                current = []
+            continue
+
+        if stripped.lstrip().startswith("- "):
+            # 新 bullet，先收掉旧的
+            if current:
+                text = md_inline_to_text(" ".join(current))
+                if text and text.lower() != "link":
+                    items.append(text)
+                current = []
+            text = stripped.lstrip()[2:].strip()
+            if text:
+                current.append(text)
+        else:
+            # 不是 "-" 开头，如果有 current，当作续行
+            if current:
+                current.append(stripped.strip())
+
+    if current:
+        text = md_inline_to_text(" ".join(current))
+        if text and text.lower() != "link":
+            items.append(text)
+
     return items
 
 
@@ -171,15 +253,24 @@ def parse_publications(limit: int | None = None) -> List[Dict[str, str]]:
             end_idx = lines[1:].index("---") + 1
         except ValueError:
             continue
+
         meta_text = "\n".join(lines[1:end_idx])
         meta = yaml.safe_load(meta_text) or {}
-        description = "\n".join(lines[end_idx + 1 :]).strip()
+
+        body_text = "\n".join(lines[end_idx + 1 :]).strip()
+        # description 里同样清理 markdown / HTML
+        description = md_inline_to_text(body_text)
+
+        raw_title = meta.get("title", path.stem.replace("-", " "))
+        raw_venue = meta.get("venue", meta.get("journal", ""))
+        raw_excerpt = meta.get("excerpt", "")
+
         publications.append(
             {
-                "title": meta.get("title", path.stem.replace("-", " ")), 
-                "venue": meta.get("venue", meta.get("journal", "")),
+                "title": md_inline_to_text(raw_title),
+                "venue": md_inline_to_text(raw_venue),
                 "date": meta.get("date", ""),
-                "excerpt": re.sub(r"<[^>]+>", "", meta.get("excerpt", "")),
+                "excerpt": md_inline_to_text(re.sub(r"<[^>]+>", "", raw_excerpt)),
                 "description": description,
             }
         )
@@ -196,7 +287,7 @@ def parse_publications(limit: int | None = None) -> List[Dict[str, str]]:
     return publications
 
 
-def build_resume(output: Path, photo: Path, pub_limit: int) -> None:  # pragma: no cover - CLI glue
+def build_resume(output: Path, photo: Path, pub_limit: int) -> None:
     about_meta = read_front_matter(ABOUT_PAGE)
     about_content = load_markdown_body(ABOUT_PAGE)
     about_paras, research = parse_about(about_content)
@@ -205,8 +296,16 @@ def build_resume(output: Path, photo: Path, pub_limit: int) -> None:  # pragma: 
     awards = parse_awards()
     publications = parse_publications(limit=pub_limit)
 
+    # 使用 Windows 自带的微软雅黑作为 Unicode 字体
+    BASE_FONT = "CJK"  # PDF 内部字体名，随便起
+    FONT_PATH = r"C:\Windows\Fonts\msyh.ttc"  # 微软雅黑
+
     pdf = ResumePDF()
+    pdf.base_font = BASE_FONT      # 🟡 告诉自定义类用哪种字体
     pdf.add_page()
+
+    # 注册 Unicode 字体（fpdf2 新版可以不写 uni 参数，避免 warning）
+    pdf.add_font(BASE_FONT, "", FONT_PATH)
 
     # Header with name and photo
     if photo.exists():
@@ -214,46 +313,57 @@ def build_resume(output: Path, photo: Path, pub_limit: int) -> None:  # pragma: 
         pdf.set_xy(45, 12)
     else:
         pdf.set_xy(10, 12)
-    pdf.set_font("Helvetica", "B", 20)
-    pdf.cell(0, 10, name or "Curriculum Vitae", ln=True)
+
+    pdf.set_font(BASE_FONT, size=20)
+    pdf.cell(0, 10, name or "Curriculum Vitae", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(5)
 
+    # About
     if about_paras:
         pdf.section_title("About")
         for para in about_paras:
             pdf.paragraph(para)
 
+    # Research Interests
     if research:
         pdf.section_title("Research Interests")
         pdf.bullet_list(research)
 
+    # Experience
     if experiences:
         pdf.section_title("Experience")
         for title, bullets in experiences.items():
-            pdf.set_font("Helvetica", "B", 12)
-            pdf.cell(0, 8, title, ln=True)
+            pdf.set_font(BASE_FONT, size=12)
+            pdf.cell(0, 8, title, new_x="LMARGIN", new_y="NEXT")
             pdf.bullet_list(bullets)
 
+    # Publications
     if publications:
         pdf.section_title("Publications")
         for pub in publications:
-            pdf.set_font("Helvetica", "B", 12)
-            pdf.cell(0, 7, pub["title"], ln=True)
+            pdf.set_font(BASE_FONT, size=12)
+            pdf.cell(0, 7, pub["title"], new_x="LMARGIN", new_y="NEXT")
+
             if pub["venue"]:
-                pdf.set_font("Helvetica", "I", 11)
-                pdf.cell(0, 6, pub["venue"], ln=True)
+                pdf.set_font(BASE_FONT, size=11)
+                pdf.cell(0, 6, pub["venue"], new_x="LMARGIN", new_y="NEXT")
+
             if pub["date"]:
-                pdf.set_font("Helvetica", size=10)
-                pdf.cell(0, 5, str(pub["date"]), ln=True)
+                pdf.set_font(BASE_FONT, size=10)
+                pdf.cell(0, 5, str(pub["date"]), new_x="LMARGIN", new_y="NEXT")
+
             if pub["excerpt"]:
+                pdf.set_font(BASE_FONT, size=11)
                 pdf.paragraph(pub["excerpt"])
+
             pdf.ln(2)
 
+    # Awards
     if awards:
         pdf.section_title("Awards")
         for title, bullets in awards.items():
-            pdf.set_font("Helvetica", "B", 12)
-            pdf.cell(0, 7, title, ln=True)
+            pdf.set_font(BASE_FONT, size=12)
+            pdf.cell(0, 7, title, new_x="LMARGIN", new_y="NEXT")
             pdf.bullet_list(bullets)
 
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -268,11 +378,11 @@ def main() -> None:  # pragma: no cover - CLI entrypoint
     parser.add_argument(
         "--photo",
         type=Path,
-        default=ROOT / "images" / "bio-photo.jpg",
+        default=ROOT / "images" / "mionhead_bluebackground.jpg",
         help="Path to a profile photo to include in the header.",
     )
     parser.add_argument(
-        "--max-publications", type=int, default=10, help="Maximum number of publications to include."
+        "--max-publications", type=int, default=100, help="Maximum number of publications to include."
     )
     args = parser.parse_args()
     build_resume(args.output, args.photo, args.max_publications)
