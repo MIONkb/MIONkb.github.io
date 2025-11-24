@@ -6,13 +6,13 @@ layout: single
 ---
 
 ## About
-{% include introduction.md %}
+{% include mion/introduction.md %}
 
 ## Education
-{% include education.md %}
+{% include mion/education.md %}
 
 ## Recent News
-{% include recent_news.md %}
+{% include mion/recent_news.md %}
 
 ## Selected Publications
 - **Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs** (DAC 2025) — Jiahang Lou, et al.; Design Automation Conference (DAC), San Francisco, USA, June 21–25, 2025. Github: [adora-compiler](https://github.com/FDU-ME-ARC/adora-compiler)**

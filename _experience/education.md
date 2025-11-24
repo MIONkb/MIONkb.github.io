@@ -2,4 +2,4 @@
 title: "Education"
 ---
 <!-- ## Education -->
-{% include education.md %}
+{% include mion/education.md %}

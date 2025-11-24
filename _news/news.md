@@ -1,4 +1,4 @@
 ---
 title: "News"
 ---
-{% include recent_news.md %}
+{% include mion/recent_news.md %}

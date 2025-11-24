@@ -11,7 +11,7 @@ redirect_from:
 
 About
 ======
-{% include introduction.md %}
+{% include mion/introduction.md %}
 
 Education
 ======
@@ -20,13 +20,13 @@ Education
 
 Open-sourced Projects
 ======
-{% include projects.md %}
+{% include mion/projects.md %}
 
 Intern Experience
 ======
 <ul>
   {% capture intern %}
-    {% include _experience/internship.md %}
+    {% include mion/internship.md %}
   {% endcapture %}
   {{ intern | markdownify }}
 </ul>
@@ -41,7 +41,7 @@ Competition
 ======
 <ul>
   {% capture comp %}
-    {% include _awards/competition.md %}
+    {% include mion/competition.md %}
   {% endcapture %}
   {{ comp | markdownify }}
 </ul>
@@ -50,7 +50,7 @@ Awards
 ======
 <ul>
   {% capture scholar %}
-    {% include _awards/scholar.md %}
+    {% include mion/scholar.md %}
   {% endcapture %}
   {{ scholar | markdownify }}
 </ul>
@@ -58,7 +58,7 @@ Awards
 
 Skills
 ======
-{% include skill.md %}
+{% include mion/skill.md %}
 
 Contact
 ======
