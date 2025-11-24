@@ -26,7 +26,7 @@ Intern Experience
 ======
 <ul>
   {% capture intern %}
-    {% include_relative _experience/internship.md %}
+    {% include_relative ../_experience/internship.md %}
   {% endcapture %}
   {{ intern | markdownify }}
 </ul>
@@ -41,7 +41,7 @@ Competition
 ======
 <ul>
   {% capture comp %}
-    {% include_relative _awards/competition.md %}
+    {% include_relative ../_awards/competition.md %}
   {% endcapture %}
   {{ comp | markdownify }}
 </ul>
@@ -50,7 +50,7 @@ Awards
 ======
 <ul>
   {% capture scholar %}
-    {% include_relative _awards/scholar.md %}
+    {% include_relative ../_awards/scholar.md %}
   {% endcapture %}
   {{ scholar | markdownify }}
 </ul>
