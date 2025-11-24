@@ -1,14 +1,13 @@
 ---
-title: "Fusion SoC Tutorial-Workshop at FPT 2025"
+title: "Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs"
 collection: publications
-category: workshops
-permalink: /event/2025-fusion-soc-workshop
-excerpt: "Hosted by Lingli Wang's group, including Yuan Dai, <strong>Jiahang Lou</strong>, Jingyuan Li, Huan Lin, Guibin Zou, XinYu Cai and other team members."
-date: 2025-12-02
-venue: "International Conference on Field Programmable Technology (<strong>FPT 2025</strong>), ShanghaiTech University, Shanghai"
-paperurl: "https://fpt-2025.lin.pub/#schedule"
-# citation: "Lingli Wang’s Group (2025). &quot;Fusion SoC Tutorial-Workshop.&quot; <i>FPT 2025</i>, ShanghaiTech University, Shanghai."
+category: conferences
+permalink: /publication/2025-adora-compiler
+excerpt: "<strong>Jiahang Lou</strong>, Qilong Zhu, Yuan Dai，Zewei Zhong, Wenbo Yin and Lingli Wang."
+date: 2025-06-21
+venue: "Design Automation Conference (<strong>DAC 2025</strong>), San Francisco, USA"
+paperurl: "https://ieeexplore.ieee.org/abstract/document/11132391"
+# citation: "Jiahang Lou, et al. (2025). &quot;Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs.&quot; <i>DAC 2025</i>, San Francisco, USA."
 ---
 
-A hands-on tutorial-workshop introducing the Fusion SoC platform and recent advances in CGRA research from Fudan University.  
-The session includes architecture insights, compiler demonstrations, and live cloud access for participants to experience our open-source CGRA toolchain.
+A unified framework that bridges user-friendly programming and high-performance acceleration for CGRAs through automated loop transformations, task/data-flow optimization, and systematic algorithms, achieving significant efficiency and scalability in edge computing applications.
