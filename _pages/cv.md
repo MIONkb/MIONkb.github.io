@@ -39,21 +39,12 @@ Publications
 
 Competition
 ======
-<ul>
-  {% capture comp %}
-    {% include mion/competition.md %}
-  {% endcapture %}
-  {{ comp | markdownify }}
-</ul>
+{% include mion/competition.md %}
+
 
 Awards
 ======
-<ul>
-  {% capture scholar %}
-    {% include mion/scholar.md %}
-  {% endcapture %}
-  {{ scholar | markdownify }}
-</ul>
+{% include mion/scholar.md %}
 
 
 Skills
