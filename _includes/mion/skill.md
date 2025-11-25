@@ -1,4 +1,4 @@
-* Programming Language: 
+<!-- * Programming Language: 
   * C/C++, CUDA
   * Verilog, Chisel(Scala)
   * Python, Shell, Marddown
@@ -11,8 +11,7 @@
 * Language: 
   * Chinese(native), English(CET6 IELTS6.5)
 * Sports:
-  * Basketball
-
+  * Basketball -->
 * Programming Language: 
   * C/C++, CUDA, Verilog, Chisel(Scala), Python, Shell, Marddown
 * Programming Framework: 
