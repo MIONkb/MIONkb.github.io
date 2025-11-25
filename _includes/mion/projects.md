@@ -1,2 +1,3 @@
-- **Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs** (DAC 2025) — Jiahang Lou, et al.; Design Automation Conference (DAC), San Francisco, USA, June 21–25, 2025. Github: [https://github.com/FDU-ME-ARC/adora-compiler](https://github.com/FDU-ME-ARC/adora-compiler)**
-A unified framework bridging user-friendly programming and high-performance acceleration for CGRAs through automated loop transformations, task/data-flow optimization, and systematic algorithms.
+- **Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs** Design Automation Conference (DAC 2025).<br>
+  - Github: [https://github.com/FDU-ME-ARC/adora-compiler](https://github.com/FDU-ME-ARC/adora-compiler)
+  - An MLIR-based unified framework bridging user-friendly programming(C, pytorch, onx) and high-performance acceleration for CGRAs through automated loop transformations, task/data-flow optimization, and systematic mapping.
