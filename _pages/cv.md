@@ -6,46 +6,38 @@ author_profile: true
 redirect_from:
   - /resume
 ---
-
 {% include base_path %}
-
-About
-======
+# Jiahang Lou 楼佳杭
+<img src="/images/mionhead_bluebackground.jpg" width="140" style="float:right; border-radius:8px; margin-left:15px;">
+<!-- <img src="/assets/img/fudan-logo.png" width="90" style="float:left; margin-right:15px;"> -->
+## About
 {% include mion/introduction.md %}
-
-Education
-======
+## Education
 * Ph.D in Electronics Engineer, Fudan University, 2022 - 2027(expected)
   * supervisor: [Prof. Lingli Wang](https://sme.fudan.edu.cn/60/3c/c31155a352316/page.htm) (llwang@fudan.edu.cn)
 * B.S. in Micro-Electronics, Fudan University, 2018 - 2022 (top 20%)
-
-Open-Source Projects
-======
+---
+## Open-Source Projects
 {% include mion/projects.md %}
-  
-Publications
-======
+---
+## Publications
 {% include mion/papers/papers-2025.md %}
 {% include mion/papers/papers-2024.md %}
-
-Competition
-======
+---
+## Competition
 {% include mion/competition.md %}
-
-Intern Experience
-======
+---
+## Intern Experience
 {% include mion/internship.md %}
-
-Skills
-======
+---
+## Skills
 {% include mion/skill.md %}
-
-Awards
-======
+---
+## Awards
 {% include mion/scholar.md %}
-
-Contact
-======
+---
+## Contact
 - **Email:** [jhlou22@m.fudan.edu.com](mailto:jhlou22@m.fudan.edu.com)
 - **Location:** Zhangheng Road 825, Shanghai, China  张衡路825号,浦东新区
+- **Homepage:** [https://MIONkb.github.io](https://MIONkb.github.io)
 - **GitHub:** [https://github.com/MIONkb](https://github.com/MIONkb)
