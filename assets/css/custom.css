@@ -11,3 +11,8 @@ h2.archive__subtitle {
     margin-bottom: 0.1rem !important;
   }
   
+  hr {
+    border: 0;
+    border-top: 2px solid #666;
+    margin: 20px 0;
+  }
