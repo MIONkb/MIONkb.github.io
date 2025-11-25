@@ -17,39 +17,32 @@ redirect_from:
 * Ph.D in Electronics Engineer, Fudan University, 2022 - 2027(expected)
   * supervisor: [Prof. Lingli Wang](https://sme.fudan.edu.cn/60/3c/c31155a352316/page.htm) (llwang@fudan.edu.cn)
 * B.S. in Micro-Electronics, Fudan University, 2018 - 2022 (top 20%)
-
----
+<hr>
 
 ## Open-Source Projects
 {% include mion/projects.md %}
-
----
+<hr>
 
 ## Publications
 {% include mion/papers/papers-2025.md %}
 {% include mion/papers/papers-2024.md %}
-
----
+<hr>
 
 ## Competition
 {% include mion/competition.md %}
-
----
+<hr>
 
 ## Intern Experience
 {% include mion/internship.md %}
-
----
+<hr>
 
 ## Skills
 {% include mion/skill.md %}
-
----
+<hr>
 
 ## Awards
 {% include mion/scholar.md %}
-
----
+<hr>
 
 ## Contact
 - **Email:** [jhlou22@m.fudan.edu.com](mailto:jhlou22@m.fudan.edu.com)
