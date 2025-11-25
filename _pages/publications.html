@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Publications"
+title: "My Publications"
 permalink: /publications/
 author_profile: true
 ---
@@ -11,7 +11,11 @@ author_profile: true
 <p class="wordwrap">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>
 {% endif %}
 
-{% include mion/papers/papers.md %}
+{% assign paper_entries = site.papers | sort: 'title'%}
+
+{% for post in paper_entries %}
+  {% include archive-single.html %}
+{% endfor %}
 
 <!-- {% assign publications = site.publications | sort: "date" | reverse %}
 
