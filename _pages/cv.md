@@ -17,7 +17,7 @@ Education
 ======
 * Ph.D in Electronics Engineer, Fudan University, 2022 - 2027(expected)
   * supervisor: [Prof. Lingli Wang](https://sme.fudan.edu.cn/60/3c/c31155a352316/page.htm) (llwang@fudan.edu.cn)
-* B.S. in Micro-Electronics, Fudan University, 2018 - 2022 (top 20%)
+* B.S. in Micro-Electronics, Fudan University, 2018 - 2022 (top 15%)
 
 Open-Source Projects
 ======

@@ -28,7 +28,7 @@ A user-friendly MLIR-based multi-level compiler framework that bridges CGRA and 
 
 ## Contact
 - **Email:** [jhlou22@m.fudan.edu.com](mailto:jhlou22@m.fudan.edu.com)
-- **Location:** Zhangheng Road 825, Shanghai, China  张衡路825号,浦东新区
+- **Location:** Zhangheng Road 825, Shanghai, China  张衡路825号,复旦大学,上海浦东新区
 - **GitHub:** [MIONkb](https://github.com/MIONkb)
 - **Google Scholar:** [Jiahang Lou](https://scholar.google.com/citations?user=kqEOgqoAAAAJ&hl=en)
 
