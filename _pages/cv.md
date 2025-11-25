@@ -25,7 +25,7 @@ Open-Source Projects
   
 Publications
 ======
-{% include mion/mion/papers.md %}
+{% include mion/papers/papers.md %}
 
 Competition
 ======
