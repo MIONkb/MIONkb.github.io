@@ -1,4 +1,4 @@
 git checkout -b master
 git add -A
-git commit -m "add fudan sign to cv"
+git commit -m "update publications"
 git push -u origin master
