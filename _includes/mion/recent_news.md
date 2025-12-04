@@ -1,4 +1,4 @@
-- **Dec 2025**  — 我们团队将在 FPT 2025（上海科技大学张江小区）举办Fusion SoC的tutoral-workshop，现场还开放了CGRA工具链的云端体验~[link](https://fpt-2025.lin.pub/#schedule)
+- **Dec 2025**  — 我们团队将在 FPT 2025（上海科技大学张江校区）举办Fusion SoC的tutoral-workshop，现场还开放了CGRA工具链的云端体验~[link](https://fpt-2025.lin.pub/#schedule)
 - **Dec 2025**  — Co-hosting **"Fusion SoC tutorial-workshop"** at **FPT 2025 (ShanghaiTech University)** on **Dec 2**. Come play with our CGRA toolchain! See [https://fpt-2025.lin.pub](https://fpt-2025.lin.pub/#schedule)
 - **Nov 2025**  — Shared a Chinese interpretation of the FPGA2025 best paper, *FlightVGM: Video-Generation Model Deployed on FPGA*, on Zhihu. [Read more](https://zhuanlan.zhihu.com/p/1966485760665456986)
 - **June 2025** — Scheduled to deliver an oral presentation at **DAC 2025**. See ya in San Francisco!

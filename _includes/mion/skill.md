@@ -15,9 +15,9 @@
 * Programming Language: 
   * C/C++, CUDA, Verilog, Chisel(Scala), Python, Shell, Markdown
 * Programming Framework: 
-  * Pytorch, Tensorflow, MLIR, LLVM, CMAKE
+  * Pytorch, Tensorflow, MLIR, LLVM, Matlab, CMAKE
 * Software: 
-  * Vivado/Vitis, Keil, Git, Synopsys Design-Compiler,VCS, Verilator 
+  * Vivado/Vitis, Keil, Synopsys Design-Compiler, VCS, Verilator, Git
 * Language: 
   * Chinese(native), English(CET6 IELTS6.5)
 * Sports:

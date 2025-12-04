@@ -1,5 +1,5 @@
 - **2024 Biren Technology “Flying Cup” GPU Programming Challenge** — National First Place · 40,000 RMB · Jul. 2024 – Aug. 2024.
-  - GPU-based development of AI operators with performance-optimized CUDA kernels and system-level integration.
+  - GPU-based development of AI operators(TopK, ReduceMean) with performance-optimized CUDA kernels and system-level integration.
   - 2024年壁仞科技“飞翔杯”GPU编程大赛 全国第一名 · 40000元。
   - [link](https://www.birentech.com/News_details/87.html)
 - **2023 “Fudan Electronics Cup” National College Electronic Design Competition** — National First Prize · 20,000 RMB · May 2023 – Aug. 2023.
