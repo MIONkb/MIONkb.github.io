@@ -37,9 +37,9 @@ redirect_from:
 ## Skills
 {% include mion/skill.md %}
 <hr>
-## Awards
+## Honors
 {% include mion/scholar.md %}
-{% include mion/honars.md %}
+{% include mion/honors.md %}
 <hr>
 ## Contact
 - **Email:** [jhlou22@m.fudan.edu.com](mailto:jhlou22@m.fudan.edu.com)

@@ -1,4 +1,4 @@
 ---
-title: "Honars"
+title: "Honors"
 ---
-{% include mion/honars.md %}
+{% include mion/honors.md %}
