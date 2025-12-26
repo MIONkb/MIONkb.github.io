@@ -24,6 +24,7 @@ redirect_from:
 {% include mion/projects.md %}
 <hr>
 ## Publications
+{% include mion/papers/papers-2026.md %}
 {% include mion/papers/papers-2025.md %}
 {% include mion/papers/papers-2024.md %}
 <hr>
