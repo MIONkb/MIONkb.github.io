@@ -35,4 +35,4 @@ A user-friendly MLIR-based multi-level compiler framework that bridges CGRA and 
 - **DATE 2024**, Valencia, Spain — Oral presentation of DATE paper “An Agile Deploying Approach for Large-Scale Workloads on CGRA-CPU Architecture”.
 - **DAC 2025**, San Francisco, USA — Scheduled oral presentation of DAC paper “Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs” (June 21–25, 2025). -->
 
-_Last updated: Dec. 6 , 2025._
+_Last updated: Dec. 26 , 2025._
