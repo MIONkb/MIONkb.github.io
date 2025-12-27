@@ -1,3 +1,3 @@
 - Outstanding Graduate of Fudan University(复旦大学优秀毕业生), 2022
 - Outstanding Student Award of Fudan University (复旦大学优秀学生), 2019
-- Computer Software Copyright Registration (China), 1st student contributor (ID.2025SR2155561), 2025.
+- Computer Software Copyright Registration (China), 1st student contributor (ID.2025SR2155561), 2025
