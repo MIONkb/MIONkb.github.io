@@ -1,4 +1,6 @@
 <!-- ## Intern Experience -->
+- **ByteDance, Shanghai** — **AI Silicon-AI Software Stack Intern**· Jan. 2026 – Present. 
+  - Explore LLM-oriented accelerator architecture using a simulator, focusing on compute/memory trade-offs and workload groups.
 - **AMD (Advanced Micro Devices), Shanghai** — **GPU Post Silicon Intern – Semi-Custom Business Unit (SCBU)**· Aug. 2021 – Jan. 2022
   - Developed Python-based tools and infrastructure for post-silicon validation and internal server platforms.
   - Built a runtime power monitor for key on-board nodes using STM32 and ADC chips.
