@@ -5,7 +5,7 @@ I have published papers at venues such as DATE 2024 and DAC 2025, and have parti
 - Research Interests:
   - Coarse-Grained Reconfigurable Architectures (CGRAs)
   - Compiler design and MLIR-based compilation frameworks
-  - LLM inference/training optimization on multi-GPU systems (parallelism, communication, scheduling)
+  - LLM inference/training optimization on multi-GPU/NPU systems (parallelism, communication, scheduling)
   - AI deployment and dataflow-aware tensor optimization for DNNs
   - Polyhedral model and loop transformations
   - Heterogeneous accelerator–CPU systems and communication optimizations
