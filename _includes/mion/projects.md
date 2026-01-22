@@ -14,7 +14,7 @@
     - FPGA prototypes via Xilinx Vitis SDK
 
 - **"Vitra" Reconfigurable Array Design** — a partitionable and dynamically reconfigurable CGRA architecture  
-  - GitHub: [https://github.com/MIONkb/FDRA](https://github.com/MIONkb/FDRA)  
+  - GitHub: [https://github.com/MIONkb/VITRA](https://github.com/MIONkb/VITRA)  
   - A CGRA design supporting partition-aware dynamic reconfiguration and flexible resource allocation  
   - Implements AXI data path and AXI-Lite control path for host–CGRA communication with on-CGRA memory access  
   - Includes a Cocotb-based simulation environment for cycle-accurate verification
