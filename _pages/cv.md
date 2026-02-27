@@ -42,7 +42,7 @@ redirect_from:
 {% include mion/honors.md %}
 <hr>
 ## Contact
-- **Email:** [jhlou22@m.fudan.edu.com](mailto:jhlou22@m.fudan.edu.cn)
+- **Email:** [jhlou22@m.fudan.edu.cn](mailto:jhlou22@m.fudan.edu.cn)
 - **Location:** Zhangheng Road 825, Shanghai, China  张衡路825号,复旦大学张江校区,上海浦东新区
 - **Homepage:** [https://MIONkb.github.io](https://MIONkb.github.io)
 - **GitHub:** [https://github.com/MIONkb](https://github.com/MIONkb)
