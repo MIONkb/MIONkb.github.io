@@ -1,4 +1,4 @@
 git checkout -b master
 git add -A
-git commit -m "update edu email address in about page and cv"
+git commit -m "update bytedance internship"
 git push -u origin master
