@@ -5,7 +5,7 @@
 - **2023 “Fudan Electronics Cup” National College Electronic Design Competition** — National First Prize · 20,000 RMB · May 2023 – Aug. 2023.
   - MLIR-based compiler development for AI model quantization and deployment on embedded platforms.
   - 2023年复旦微全国大学生电子设计大赛 软硬件赛道 全国一等奖 · 20000元。
-  - [link](https://fuweibei.com/history/5.html)
+  - [link](https://mp.weixin.qq.com/s/1IFsUHYG8RiMZTC6kaPhwQ)
 - **The 5th National College IC Competition for Innovation and Entrepreneurship (CICC)** — Second Prize of National Finals · 15,000 RMB · Mar. 2021 – Aug. 2021.
   - Led a team to develop a speech-controlled wireless smart helmet using a Xilinx FPGA and the IEEE 802.11ah protocol. Responsible for the hardware/software architecture, low-level hardware interfaces, Verilog-based speech recognition accelerator, RISC-V CPU integration, and SDK development.
   - 2021年第五届全国大学生集成电路创新创业大赛 国家级二等奖 · 15000元。
