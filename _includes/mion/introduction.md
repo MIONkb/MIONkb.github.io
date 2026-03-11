@@ -2,15 +2,15 @@ I am a Ph.D. student in Electronics Engineering (EE) at the State Key Laboratory
 
 I have published papers at venues such as DATE 2024 and DAC 2025, and have participated in national and international competitions in electronic design and GPU programming. I also have internship experience at leading technology companies.
 
-- Research Interests:
-  - **Compiler**
-    - Compiler design and MLIR-based compilation frameworks
-    - Polyhedral model and loop transformations
-    - Dataflow-aware tensor optimization for DNNs
-  - **DNN/LLM Deployment**
-    - Heterogeneous accelerator–CPU systems and communication optimizations
-    - LLM inference/training optimization on multi-GPU/NPU (parallelism, communication, scheduling)
-  - **Computing Architecture**
-    - Coarse-grained reconfigurable architectures (CGRAs)
-    - Advanced computing architectures for LLMs and DNNs (e.g., NoC, Chiplet-based systems)
+Research Interests:
+- **Compiler**
+  - Compiler design and MLIR-based compilation frameworks
+  - Polyhedral model and loop transformations
+  - Dataflow-aware tensor optimization for DNNs
+- **DNN/LLM Deployment**
+  - Heterogeneous accelerator–CPU systems and communication optimizations
+  - LLM inference/training optimization on multi-GPU/NPU (parallelism, communication, scheduling)
+- **Computing Architecture**
+  - Coarse-grained reconfigurable architectures (CGRAs)
+  - Advanced computing architectures for LLMs and DNNs (e.g., NoC, Chiplet-based systems)
   
