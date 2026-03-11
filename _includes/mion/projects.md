@@ -1,20 +1,27 @@
-- **Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs.**  Design Automation Conference (**DAC 2025**).  
-  - GitHub: [https://github.com/FDU-ME-ARC/adora-compiler](https://github.com/FDU-ME-ARC/adora-compiler)  
-  - An MLIR-based unified framework that bridges user-friendly programming (C, PyTorch, ONNX) and high-performance CGRA acceleration through automated loop transformations, task/dataflow optimization, and systematic mapping.  
-  - Multiple frontend input types:
+- **Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs.** Design Automation Conference (**DAC 2025**).  
+  - GitHub: [adora-compiler](https://github.com/FDU-ME-ARC/adora-compiler)  
+  - MLIR-based unified compiler from high-level input to CGRA acceleration, with emphasis on **loop transformations**, **dataflow optimization**, and **custom lowering of tensor operators**.  
+  - **Multiple frontends:**
     - C via Polygeist  
     - PyTorch via Torch-MLIR  
-    - ONNX via [**adora-onnx-mlir**](https://github.com/MIONkb/adora-onnx-mlir/tree/adora) (an self-hosted ONNX-MLIR version for our ADORA)  
-  - Multi-level optimization:
-    - For ONNX-based neural networks: dataflow optimization for GEMM; other operators are lowered to affine loop nests  
-    - For loop programs: polyhedral-based loop transformations (tiling, unrolling, reordering), plus branch and peephole optimizations  
-  - Multiple backends:
+    - ONNX via [**adora-onnx-mlir**](https://github.com/MIONkb/adora-onnx-mlir/tree/adora) (self-hosted ONNX-MLIR for ADORA)  
+  - **Loop and dataflow:**
+    - Polyhedral-based loop transformations (tiling, unrolling, reordering)
+    - GEMM/dataflow optimization for tensor kernels
+    - Custom lowering of tensor ops to affine/backend forms
+    - Branch and peephole optimizations
+  - **Multiple backends:**
     - Rocket + CGRA in the Chipyard environment  
     - Cocotb-based CGRA simulation  
     - FPGA prototypes via Xilinx Vitis SDK
 
-- **"Vitra" Reconfigurable Array Design** — a partitionable and dynamically reconfigurable CGRA architecture  
-  - GitHub: [https://github.com/MIONkb/VITRA-CGRA](https://github.com/MIONkb/VITRA-CGRA)  
-  - A CGRA design supporting partition-aware dynamic reconfiguration and flexible resource allocation  
-  - Implements AXI data path and AXI-Lite control path for host–CGRA communication with on-CGRA memory access  
-  - Includes a Cocotb-based simulation environment for cycle-accurate verification
+- **"Vitra" Reconfigurable Array Design**  
+  - GitHub: [VITRA-CGRA](https://github.com/MIONkb/VITRA-CGRA)  
+  - **Focus: CGRA micro-architecture.** Partitionable, dynamically reconfigurable array with flexible resource allocation.  
+  - Supports diverse tensor operators and parallel computing scenarios (e.g., AI, HPC, pathfinding, cryptography).  
+  - AXI (data) and AXI-Lite (control) for host–CGRA communication; on-CGRA memory access. Includes a Cocotb-based simulation environment.
+
+- **Unified CGRA Development, Deployment, Verification and Testing Framework**  
+  - **Focus: one toolchain, one AXI API, dual use.** The same CGRA AXI interface and compilation output are used for (i) Cocotb RTL simulation (fast iteration, no board) and (ii) FPGA board verification (ARM + DMA + CGRA as SoC IP).  
+  - Builds on the compiler toolchain and CGRA IP; one artifact drives both Cocotb runs and Vitis SDK deployment.  
+  - We will demonstrate LLM-based story continuation on this platform at **ISCAS 2026**.
