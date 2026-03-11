@@ -4,7 +4,7 @@ I have published papers at venues such as DATE 2024 and DAC 2025, and have parti
 
 - Research Interests:
   - **Compiler**
-    - ***Compiler design and MLIR-based compilation frameworks
+    - Compiler design and MLIR-based compilation frameworks
     - Polyhedral model and loop transformations
     - Dataflow-aware tensor optimization for DNNs
   - **DNN/LLM Deployment**
