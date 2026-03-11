@@ -28,11 +28,11 @@ redirect_from:
 {% include mion/papers/papers-2025.md %}
 {% include mion/papers/papers-2024.md %}
 <hr>
-## Competition
-{% include mion/competition.md %}
-<hr>
 ## Intern Experience
 {% include mion/internship.md %}
+<hr>
+## Competition
+{% include mion/competition.md %}
 <hr>
 ## Skills
 {% include mion/skill.md %}
