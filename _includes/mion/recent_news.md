@@ -1,5 +1,5 @@
+- **May 2026**  — We will give an on-site demo at **ISCAS 2026 (Shanghai)** of deploying CGRA on FPGA to support diverse workloads, including **Llama inference**—a small “continue-your-story” LLM deployment demo. Come and try our storytelling experience and the full toolchain in Shanghai! Special thanks to **Jianrong** for the close collaboration and huge contributions!
 - **Mar 2026**  — Our paper has been accepted by **ISEDA 2026**. Special thanks to **Jiayao** for the great collaboration!
-- **Jan 2026**  — We will give an on-site demo at **ISCAS 2026 (Shanghai)** of deploying CGRA on FPGA to support diverse workloads, including **Llama inference**—a small “continue-your-story” LLM deployment demo. Come and try our storytelling experience and the full toolchain in Shanghai! Special thanks to **Jianrong** for the close collaboration and huge contributions!
 - **Jan 2026**  — Our work *Live Demonstration: an Agile FPGA-Overlayed CGRA SoC for High-Efficiency Computing* has been accepted by **ISCAS 2026**.
 - **Jan 2026**  — Joined ByteDance’s AI chip team as an intern, contributing to the software stack for LLM acceleration.
 - **Dec 2025**  — Co-hosting **"Fusion SoC tutorial-workshop"** at **FPT 2025 (ShanghaiTech University)** on **Dec 2**. Come play with our CGRA toolchain! See [https://fpt-2025.lin.pub](https://fpt-2025.lin.pub/#schedule)
