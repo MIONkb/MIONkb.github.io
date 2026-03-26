@@ -2,7 +2,7 @@ I am a Ph.D. student in Electronics Engineering (EE) at the State Key Laboratory
 
 I have published papers at venues such as DATE 2024 and DAC 2025, and have participated in national and international competitions in electronic design and GPU programming. I also have internship experience at leading technology companies.
 
-Research Interests:
+**Research Interests:**
 - **Compiler**
   - Compiler design and MLIR-based compilation frameworks
   - Polyhedral model and loop transformations
