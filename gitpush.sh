@@ -1,4 +1,4 @@
 git checkout -b master
 git add -A
-git commit -m "update Uveri to cv. update introduction.md's research interests"
+git commit -m "update iscas demo to news"
 git push -u origin master
