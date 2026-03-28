@@ -30,6 +30,7 @@ redirect_from:
 <hr>
 ## Intern Experience
 {% include mion/internship.md %}
+{% include mion/Thead-assistant-experience.md %}
 <hr>
 ## Competition
 {% include mion/competition.md %}
