@@ -20,9 +20,6 @@ redirect_from:
   * supervisor: [Prof. Lingli Wang](https://sme.fudan.edu.cn/60/3c/c31155a352316/page.htm)
 * B.S. in Micro-Electronics, Fudan University, 2018 - 2022
 <hr>
-## Open-Source Projects
-{% include mion/projects.md %}
-<hr>
 ## Publications
 {% include mion/papers/papers-2026.md %}
 {% include mion/papers/papers-2025.md %}
@@ -34,6 +31,9 @@ redirect_from:
 <hr>
 ## Competition
 {% include mion/competition.md %}
+<hr>
+## Open-Source Projects
+{% include mion/projects.md %}
 <hr>
 ## Skills
 {% include mion/skill.md %}
