@@ -7,6 +7,7 @@ I have published papers at venues such as DATE 2024 and DAC 2025, and have parti
   - Compiler design and MLIR-based compilation frameworks
   - Polyhedral model and loop transformations
   - Dataflow-aware tensor optimization for DNNs
+  - LLM-Assisted Compiler-Agent System
 - **DNN/LLM Deployment**
   - Heterogeneous accelerator–CPU systems and communication optimizations
   - LLM inference/training optimization on multi-GPU/NPU (parallelism, communication, scheduling)
