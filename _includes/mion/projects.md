@@ -25,3 +25,8 @@
   - **Focus: one toolchain, one AXI API, dual use.** The same CGRA AXI interface and compilation output are used for (i) Cocotb RTL simulation (fast iteration, no board) and (ii) FPGA board verification (ARM + DMA + CGRA as SoC IP).  
   - Builds on the compiler toolchain and CGRA IP; one artifact drives both Cocotb runs and Vitis SDK deployment.  
   - We will demonstrate LLM-based story continuation on this platform at **ISCAS 2026**.
+
+- **Agent-Compiler: Compiler-Agent Prototype for Programmable Dataflow Execution**  
+  - Built a compiler-agent prototype where agents rank compiler-approved decisions while the compiler/runtime preserves legality, validation, and replayability.
+  - Implemented Python replay tooling and integrated trajectory emission into adora-compiler to generate real compile-run episodes for policy comparison.
+  - Defined structured observation/action interfaces and an evaluation roadmap for latency, throughput, and orchestration metrics.
