@@ -26,7 +26,7 @@
   - Builds on the compiler toolchain and CGRA IP; one artifact drives both Cocotb runs and Vitis SDK deployment.  
   - We will demonstrate LLM-based story continuation on this platform at **ISCAS 2026**.
 
-- **Agent-Compiler: Compiler-Agent Prototype for Programmable Dataflow Execution**  
-  - Built a compiler-agent prototype where agents rank compiler-approved decisions while the compiler/runtime preserves legality, validation, and replayability.
-  - Implemented Python replay tooling and integrated trajectory emission into adora-compiler to generate real compile-run episodes for policy comparison.
-  - Defined structured observation/action interfaces and an evaluation roadmap for latency, throughput, and orchestration metrics.
+- **Agent-Compiler: LLM-Agent Interface for Compiler-Guided Dataflow Optimization**  
+  - Designed a clear compiler-agent division of labor: the compiler generates and validates legal optimization candidates, the LLM agent ranks these candidates, and the compiler/runtime makes the final accepted decision.
+  - Defined structured observation/action interfaces that expose hardware-aware context, legal candidate decisions, and compiler feedback for auditable agent reasoning.
+  - Built the prototype on my Adora CGRA compiler, using replayable compilation traces to compare heuristic and LLM-guided policies on mapping quality, routing pressure, and compilation stability.
