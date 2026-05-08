@@ -1,3 +1,4 @@
+- **May 2026**  — Our **ISEDA 2026** paper has been selected as a **Best Paper Candidate**.
 - **May 2026**  — We will give an on-site demo at **ISCAS 2026 (Shanghai)** of deploying CGRA on FPGA to support diverse workloads, including **Llama inference**—a small “continue-your-story” LLM deployment demo. Come and try our storytelling experience and the full toolchain in Shanghai! Special thanks to **Jianrong** for the close collaboration and huge contributions!
 - **Mar 2026**  — Our paper has been accepted by **ISEDA 2026**. Special thanks to **Jiayao** for the great collaboration!
 - **Jan 2026**  — Our work *Live Demonstration: an Agile FPGA-Overlayed CGRA SoC for High-Efficiency Computing* has been accepted by **ISCAS 2026**.
